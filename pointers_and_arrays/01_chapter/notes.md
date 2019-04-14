@@ -93,7 +93,7 @@ Each variable is assigned a specific block of memory within the computer to hold
 ```
 to print to the screen the integer value stored at the address pointed to by ``ptr``
 
-#### Refer to main.c for a reference program
+#### Refer to program_1_1.c for a reference program
 
 
 ### To review:
