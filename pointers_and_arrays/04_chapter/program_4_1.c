@@ -50,7 +50,6 @@ int main(int argc, char *argv[]) {
    printf("String 1 after: %s\n", string_1);
 
    const char *const string_3 = my_strchr(string_1, 'h');
-   //const char *const string_3 = strchr(string_1, 'h');
    printf("String 3: %s\n", string_3);
 
    return 0;
