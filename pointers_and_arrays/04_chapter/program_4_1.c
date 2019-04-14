@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 unsigned int my_strlen(const char *string) {
    unsigned int i = 0;
@@ -31,12 +32,9 @@ unsigned int my_strcat(char *dest, const char *src) {
 }
 
 char *my_strchr(char *haystack, const char needle) {
-   char *ptr = haystack;
-   while (  (*ptr != '\0') &&
-            (*ptr != needle) ) {
-      ptr++;
+   while (  (*haystack != needle) &&
+            (*haystack++ != '\0') ) {
    }
-   *ptr = '\0';
 
    return haystack;
 }
@@ -52,6 +50,7 @@ int main(int argc, char *argv[]) {
    printf("String 1 after: %s\n", string_1);
 
    const char *const string_3 = my_strchr(string_1, 'h');
+   //const char *const string_3 = strchr(string_1, 'h');
    printf("String 3: %s\n", string_3);
 
    return 0;
