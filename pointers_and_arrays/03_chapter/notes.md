@@ -16,8 +16,8 @@ my_string[4] = '\0';
 
 Figure 3.1 is not an ideal way of building a string, but the end result is a string in that it is an aray of characters **terminated with a nul character**. "nul" is **not** the same as "NULL".
 
-	* "nul" refers to a zero as defined by the escape sequence `\0`.
-	* "NULL" refers to the name of the macro used to initialize null pointers.
+* "nul" refers to a zero as defined by the escape sequence `\0`.
+* "NULL" refers to the name of the macro used to initialize null pointers.
 
 Since writing a string such as figure 3.1 is time consuming, C permits two alternative ways of achieving the same thing
 
@@ -52,7 +52,7 @@ char *my_strcpy(char *destination, const char *source) {
 	return destination;
 }
 ```
-In the routine, `*my_strcpy()` returns a pointer instead of the size.
+In figure 3.3, `*my_strcpy()` a pointer instead of the size.
 
 **Figure 3.4**
 ```c
@@ -68,3 +68,4 @@ int my_strncpy(char *destination, const char *source, const int size) {
 	return i;
 }
 ```
+In figure 3.4, `my_strncpy()` returns the size of characters copied.
