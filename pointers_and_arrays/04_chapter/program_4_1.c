@@ -32,11 +32,13 @@ unsigned int my_strcat(char *dest, const char *src) {
 }
 
 char *my_strchr(char *haystack, const char needle) {
-   while (  (*haystack != needle) &&
-            (*haystack++ != '\0') ) {
+   char *ptr = haystack;
+   while (  (*ptr != needle) &&
+            (*ptr != '\0') ) {
+      ptr++;
    }
 
-   return haystack;
+   return ptr;
 }
 
 int main(int argc, char *argv[]) {
